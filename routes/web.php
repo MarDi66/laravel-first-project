@@ -11,19 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', 'PagesController@homeAction')
+->name('home');
 
-Route::get('/contact', function() {
-    return view('contact');
-})->name('contact');
+Route::get('/contact', 'PagesController@contactAction')
+->name('contact');
 
-Route::get('/about', function() {
-    return view('about');
-})->name('about');
+Route::get('/about', 'PagesController@aboutAction')
+->name('about');
 
-Route::get('contact/messages', 'ContactController@getMessages')->name('get-messages');
+Route::get('contact/messages', 'ContactController@getMessages')
+->name('get-messages');
 
 Route::post('contact/submit', 'ContactController@submit')
 ->name('contact-form-submit');
