@@ -3,7 +3,8 @@
 @section('content')
     <h1>Contact us</h1>
 
-    <form>
+    <form method="post" action="{{ route('contact-form-submit') }}">
+        @csrf
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" class="form-control" name="name" id="name" placeholder="Enter name">
