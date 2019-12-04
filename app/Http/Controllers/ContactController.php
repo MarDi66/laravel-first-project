@@ -16,6 +16,6 @@ class ContactController extends Controller
         $message->message = $request->input('message');
         $message->save();
 
-        return redirect()->route('home');
+        return redirect()->route('home')->with('success', 'Message sent! Thank you!');
     }
 }
