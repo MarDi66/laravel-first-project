@@ -30,4 +30,16 @@ class ContactRequest extends FormRequest
             'message' => 'required'
         ];
     }
+
+    public function messages() {
+        return [
+            'name.required' => 'You should fill the name field :)'
+        ];
+    }
+
+    public function attributes() {
+        return [
+            'email' => 'email address'
+        ];
+    }
 }
