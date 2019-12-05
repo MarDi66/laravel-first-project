@@ -16,6 +16,9 @@ There is also a backend validation.
 ## To start it
 
 ``Clone the repo``
+
 ``npm install``
+
 ``Launch your local server``
+
 ``Go to localhost``
